@@ -14,7 +14,7 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
 COPY ./.sti/bin/ /usr/local/sti
 
-RUN chown -R 1001: /config/dropins/
+RUN chown -R 1001 /config/dropins/
 
 RUN chmod -R a+x /usr/local/sti
 
