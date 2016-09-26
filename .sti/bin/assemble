@@ -13,13 +13,9 @@ if [ "$1" = "-h" ]; then
 	exec /usr/local/sti/usage
 fi
 
-ls -latR /tmp/
-
-find / -name "*.war"
-
 # Binary deployment is a single war
-if [ $(ls /tmp/wars/*.war | wc -l) -eq 1 ]; then
-  mv /tmp/wars/*.war /config/dropins/
+if [ $(ls /tmp/wars/src/*.war | wc -l) -eq 1 ]; then
+  mv /tmp/wars/src/*.war /config/dropins/
 else
   exit 1
 fi
