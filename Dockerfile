@@ -11,13 +11,17 @@ LABEL io.k8s.description="Platform for deploying wars onto the liberty web profi
       io.openshift.s2i.destination="/tmp/wars/"
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
+
 COPY ./.sti/bin/ /usr/local/sti
 
-USER 1001
+RUN chown -R 1001 /usr/local/sti
 
 RUN mkdir /tmp/wars
 
-# Set the default port for applications built using this image
+RUN chown 1001 /tmp/wars
+
+USER 1001
+
 EXPOSE 9080 9443
 
 CMD ["usage"]
