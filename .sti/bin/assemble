@@ -14,11 +14,8 @@ if [ "$1" = "-h" ]; then
 fi
 
 # Binary deployment is a single war
-if [ $(ls /tmp/war/*.war | wc -l) -eq 1 ]; then
-  mv /opt/openshift/*.war /config/dropins/
+if [ $(ls /tmp/wars/*.war | wc -l) -eq 1 ]; then
+  mv /tmp/wars/*.war /config/dropins/
 else
   exit 1
 fi
-
-
-/config/dropins/
