@@ -15,6 +15,8 @@ COPY ./.sti/bin/ /usr/local/sti
 
 USER 1001
 
+RUN mkdir /tmp/wars
+
 # Set the default port for applications built using this image
 EXPOSE 9080 9443
 
