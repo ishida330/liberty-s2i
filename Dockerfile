@@ -14,7 +14,7 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
 COPY ./.sti/bin/ /usr/local/sti
 
-USER root
+USER 1
 
 RUN chown -R root /config/dropins/
 
