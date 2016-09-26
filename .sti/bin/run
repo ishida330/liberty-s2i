@@ -1,0 +1,2 @@
+#!/bin/sh -x
+/opt/ibm/docker/docker-server run defaultServer
