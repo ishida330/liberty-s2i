@@ -13,6 +13,8 @@ LABEL io.k8s.description="Platform for deploying wars onto the liberty web profi
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 COPY ./.sti/bin/ /usr/local/sti
 
+USER 1001
+
 # Set the default port for applications built using this image
 EXPOSE 9080 9443
 
