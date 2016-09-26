@@ -14,11 +14,11 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
 COPY ./.sti/bin/ /usr/local/sti
 
-RUN chown -R 1001 /config/dropins/
+USER root
+
+RUN chown -R root /config/dropins/
 
 RUN chmod -R a+x /usr/local/sti
-
-USER 1001
 
 RUN mkdir /tmp/wars
 
