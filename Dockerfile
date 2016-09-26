@@ -18,9 +18,9 @@ RUN chown -R 1001 /config/dropins/
 
 RUN chmod -R a+x /usr/local/sti
 
-RUN mkdir /tmp/wars
-
 USER 1001
+
+RUN mkdir /tmp/wars
 
 EXPOSE 9080 9443
 
