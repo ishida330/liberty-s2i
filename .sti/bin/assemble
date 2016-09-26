@@ -19,3 +19,5 @@ if [ $(ls /tmp/wars/*.war | wc -l) -eq 1 ]; then
 else
   exit 1
 fi
+
+ls -latR /tmp/
