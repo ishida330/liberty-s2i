@@ -14,13 +14,11 @@ LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
 COPY ./.sti/bin/ /usr/local/sti
 
-RUN chown -R 1001 /usr/local/sti
-
-RUN mkdir /tmp/wars
-
-RUN chown 1001 /tmp/wars
+RUN chmod -R u+x /usr/local/sti
 
 USER 1001
+
+RUN mkdir /tmp/wars
 
 EXPOSE 9080 9443
 
