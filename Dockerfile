@@ -18,9 +18,9 @@ USER 0
 
 RUN chown -R root /config/dropins/
 
-RUN chmod -R a+x /usr/local/sti
+RUN chmod -R a+x /usr/local/s2i
 
-RUN mkdir /tmp/wars
+RUN mkdir /target
 
 EXPOSE 9080 9443
 
