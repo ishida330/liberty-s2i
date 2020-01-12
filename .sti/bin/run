@@ -1,3 +1,4 @@
 #!/bin/bash -e
 
-/opt/ibm/docker/docker-server run defaultServer
+# /opt/ibm/docker/docker-server run defaultServer
+exec /opt/ibm/wlp/bin/server run defaultServer
