@@ -13,9 +13,15 @@ if [ "$1" = "-h" ]; then
 	exec /usr/local/s2i/usage
 fi
 
+mvn package
+echo `pwd`
+echo `src`
+echo `ls target`
+echo `ls -al /tmp/wars/`
+
 # Binary deployment is a single war
-if [ $(ls /tmp/wars/*.war | wc -l) -eq 1 ]; then
-  mv /tmp/wars/*.war /config/dropins/
+if [ $(ls /tmp/wars/target/*.war | wc -l) -eq 1 ]; then
+  mv /tmp/wars/target/*.war /config/dropins/
 else
   exit 1
 fi
