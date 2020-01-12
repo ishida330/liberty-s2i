@@ -8,7 +8,7 @@ LABEL io.k8s.description="Platform for deploying wars onto the liberty web profi
       io.k8s.display-name="Liberty builder 1.0" \
       io.openshift.expose-services="9080:http,9443:https" \
       io.openshift.tags="builder,websphere-liberty,webProfile7" \
-      io.openshift.s2i.destination="/tmp/wars/"
+      io.openshift.s2i.destination="/target/"
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
