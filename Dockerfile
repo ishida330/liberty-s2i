@@ -12,7 +12,7 @@ LABEL io.k8s.description="Platform for deploying wars onto the liberty web profi
 
 LABEL io.openshift.s2i.scripts-url=image:///usr/local/sti
 
-COPY ./.sti/bin/ /usr/local/sti
+COPY ./.s2i/bin/ /usr/local/s2i
 
 USER 0
 
