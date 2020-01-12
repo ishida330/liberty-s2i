@@ -1,3 +1,5 @@
+cloned from : https://github.com/noelo/liberty-s2i
+
 ## Example S2I builder image for Websphere Liberty Profile
 
 ## Creating Builder image
