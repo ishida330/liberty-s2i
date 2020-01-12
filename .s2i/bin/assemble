@@ -1,0 +1,21 @@
+#!/bin/bash -ex
+#
+# S2I assemble script for the 'liberty-sti' image.
+# The 'assemble' script currently only supports binary builds.
+#
+# For more information refer to the documentation:
+#	https://github.com/openshift/source-to-image/blob/master/docs/builder_image.md
+#
+
+if [ "$1" = "-h" ]; then
+	# If the 'liberty-sti' assemble script is executed with '-h' flag,
+	# print the usage.
+	exec /usr/local/sti/usage
+fi
+
+# Binary deployment is a single war
+if [ $(ls /target/*.war | wc -l) -eq 1 ]; then
+  mv /target/*.war /config/dropins/
+else
+  exit 1
+fi
