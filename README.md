@@ -4,7 +4,7 @@ cloned from : https://github.com/noelo/liberty-s2i
 
 ## Creating Builder image
 ```
-oc new-build https://github.com/noelo/liberty-s2i.git --strategy=docker
+oc new-build https://github.com/ishida330/liberty-s2i.git --strategy=docker
 ```
 
 #### Due to the websphere liberty profile requiring root access the builder and default service accounts need to be in the anyuid SCC
