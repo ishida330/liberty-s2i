@@ -13,7 +13,7 @@ if [ "$1" = "-h" ]; then
 	exec /usr/local/s2i/usage
 fi
 
-mvn package
+#mvn package
 echo `pwd`
 echo `src`
 echo `ls target`
